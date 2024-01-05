@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>常用的算法技巧 | 新水的个人博客</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="最近重新温习了一下算法，总结了一些常用的算法技巧。 递归二分法分而治之（D&amp;C）快速排序就是参考这个思想。工作原理是：  找出简单的基线条件 确定如何缩小问题的规模，使其符合技术条件，典型的分土地问题，基数条件是长是宽的倍数。12345678试着用分而治之的思想，来理解快速排序。 快速排序的基线条件是数组为空或者只包含一个，这种情况下，只需要返回数组，根本就不用排序。首先，我们从数组中选择">
+<meta property="og:type" content="article">
+<meta property="og:title" content="常用的算法技巧">
+<meta property="og:url" content="http://example.com/2024/01/05/%E5%B8%B8%E7%94%A8%E7%9A%84%E7%AE%97%E6%B3%95%E6%8A%80%E5%B7%A7/index.html">
+<meta property="og:site_name" content="新水的个人博客">
+<meta property="og:description" content="最近重新温习了一下算法，总结了一些常用的算法技巧。 递归二分法分而治之（D&amp;C）快速排序就是参考这个思想。工作原理是：  找出简单的基线条件 确定如何缩小问题的规模，使其符合技术条件，典型的分土地问题，基数条件是长是宽的倍数。12345678试着用分而治之的思想，来理解快速排序。 快速排序的基线条件是数组为空或者只包含一个，这种情况下，只需要返回数组，根本就不用排序。首先，我们从数组中选择">
+<meta property="og:locale">
+<meta property="article:published_time" content="2024-01-05T03:42:11.000Z">
+<meta property="article:modified_time" content="2024-01-05T06:27:35.039Z">
+<meta property="article:author" content="新水">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="新水的个人博客" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">新水的个人博客</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        
+          <a class="nav-icon" href="/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
+        
+        <a class="nav-icon nav-search-btn" title="Suche"><span class="fa fa-search"></span></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Suche"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-常用的算法技巧" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2024/01/05/%E5%B8%B8%E7%94%A8%E7%9A%84%E7%AE%97%E6%B3%95%E6%8A%80%E5%B7%A7/" class="article-date">
+  <time class="dt-published" datetime="2024-01-05T03:42:11.000Z" itemprop="datePublished">2024-01-05</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E7%AE%97%E6%B3%95/">算法</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      常用的算法技巧
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>最近重新温习了一下算法，总结了一些常用的算法技巧。</p>
+<h3 id="递归"><a href="#递归" class="headerlink" title="递归"></a>递归</h3><h3 id="二分法"><a href="#二分法" class="headerlink" title="二分法"></a>二分法</h3><h3 id="分而治之（D-C）"><a href="#分而治之（D-C）" class="headerlink" title="分而治之（D&amp;C）"></a>分而治之（D&amp;C）</h3><p>快速排序就是参考这个思想。工作原理是：</p>
+<ol>
+<li>找出简单的基线条件</li>
+<li>确定如何缩小问题的规模，使其符合技术条件，典型的分土地问题，基数条件是长是宽的倍数。<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">试着用分而治之的思想，来理解快速排序。 快速排序的基线条件是数组为空或者只包含一个，这种情况下，只需要返回数组，根本就不用排序。首先，我们从数组中选择一个元素，这个元素被称为基准值（pivot）。</span><br><span class="line"></span><br><span class="line">接下来，我们找出比基准值小的元素以及比基准值大的元素，这被称为分区（partitioning）。现在我们有：</span><br><span class="line">（1）一个小于所有基准值的数组组成的子数组</span><br><span class="line">（2）基准值</span><br><span class="line">（3）一个由所有大于基准值的数字组成的子数组</span><br><span class="line">这时，子数组是无序的，如果子数组有序，则排序就成功了。于是我们递归对子数组进行排序，最后把数组合并就是有序的数组了。</span><br><span class="line"></span><br></pre></td></tr></table></figure></li>
+</ol>
+<h3 id="常用排序"><a href="#常用排序" class="headerlink" title="常用排序"></a>常用排序</h3><ol>
+<li>选择排序，性能低</li>
+<li>快速排序<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">    public static void quickSort(int[] nums, int left, int right) &#123;</span><br><span class="line">        if (left &gt;= right) &#123;</span><br><span class="line">            return;</span><br><span class="line">        &#125;</span><br><span class="line">        int mid = left;</span><br><span class="line">        int base = nums[mid], l = left, r = right;</span><br><span class="line">        while (l != r) &#123;</span><br><span class="line">            // 从右边往左边检索,当右边的数小于基数时，停止</span><br><span class="line">            while (base &lt;= nums[r] &amp;&amp; l &lt; r) &#123;</span><br><span class="line">                r--;</span><br><span class="line">            &#125;</span><br><span class="line">            // 从左边往右边检索,当左边的数大于基数时，停止</span><br><span class="line">            while (nums[l] &lt;= base &amp;&amp; l &lt; r) &#123;</span><br><span class="line">                l++;</span><br><span class="line">            &#125;</span><br><span class="line">            //这里表示找到右边有小于基数的，左边有大于基数的，因此交换位置</span><br><span class="line">            int temp = nums[r];</span><br><span class="line">            nums[r] = nums[l];</span><br><span class="line">            nums[l] = temp;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">        // 当代码执行到这里时，把基数和中点的数交换位置</span><br><span class="line">        nums[left] = nums[l];</span><br><span class="line">        nums[l] = base;</span><br><span class="line">        // 分治法，继续排序基数左边的</span><br><span class="line">        quickSort(nums, left, l - 1);</span><br><span class="line">        // 分治法，继续排序基数右边的</span><br><span class="line">        quickSort(nums, l + 1, right);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure></li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2024/01/05/%E5%B8%B8%E7%94%A8%E7%9A%84%E7%AE%97%E6%B3%95%E6%8A%80%E5%B7%A7/" data-id="clr0983rm00008ougej0b0omj" data-title="常用的算法技巧" class="article-share-link"><span class="fa fa-share">Teilen</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2024/01/03/%E6%90%9C%E7%B4%A2%E5%B8%B8%E7%94%A8%E6%8A%80%E5%B7%A7/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Älter</strong>
+      <div class="article-nav-title">搜索常用技巧</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Kategorien</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/%E4%BA%91%E5%8E%9F%E7%94%9F/">云原生</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%8D%9A%E5%AE%A2%E6%95%99%E7%A8%8B/">博客教程</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%B7%A5%E5%85%B7/">工具</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%95%B0%E6%8D%AE%E5%BC%80%E5%8F%91/">数据开发</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%94%9F%E6%B4%BB%E6%9D%82%E8%AE%B0/">生活杂记</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%AE%97%E6%B3%95/">算法</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%95%B0%E6%8D%AE%E4%B8%AD%E5%8F%B0/" rel="tag">数据中台</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/%E6%95%B0%E6%8D%AE%E4%B8%AD%E5%8F%B0/" style="font-size: 10px;">数据中台</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archiv</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/01/">January 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/12/">December 2023</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">letzter Beitrag</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2024/01/05/%E5%B8%B8%E7%94%A8%E7%9A%84%E7%AE%97%E6%B3%95%E6%8A%80%E5%B7%A7/">常用的算法技巧</a>
+          </li>
+        
+          <li>
+            <a href="/2024/01/03/%E6%90%9C%E7%B4%A2%E5%B8%B8%E7%94%A8%E6%8A%80%E5%B7%A7/">搜索常用技巧</a>
+          </li>
+        
+          <li>
+            <a href="/2023/12/30/%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C/">两数之和</a>
+          </li>
+        
+          <li>
+            <a href="/2023/12/25/%E6%95%B0%E6%8D%AE%E4%B8%AD%E5%8F%B0%E6%98%AF%E4%BB%80%E4%B9%88/">数据中台是什么</a>
+          </li>
+        
+          <li>
+            <a href="/2023/12/25/java%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E7%AE%80%E5%8D%95%E7%9A%84%E4%BB%A4%E7%89%8C%E6%A1%B6/">java实现一个简单的令牌桶</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2024 新水<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.6.4.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
