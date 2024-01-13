@@ -75,6 +75,56 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-费曼学习法" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2024/01/05/%E8%B4%B9%E6%9B%BC%E5%AD%A6%E4%B9%A0%E6%B3%95/" class="article-date">
+  <time class="dt-published" datetime="2024-01-05T07:42:37.000Z" itemprop="datePublished">2024-01-05</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E7%94%9F%E6%B4%BB%E6%9D%82%E8%AE%B0/">生活杂记</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2024/01/05/%E8%B4%B9%E6%9B%BC%E5%AD%A6%E4%B9%A0%E6%B3%95/">费曼学习法</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>费曼学习法（Feynman Learning Technique）是一种学习和提高思维能力的方法，它基于物理学家理查德·费曼（Richard Feynman）的学习方式和思维方式。</p>
+<p>费曼学习法的步骤如下：</p>
+<p>选择一个主题： 选择你要学习的主题或概念。</p>
+<p>以教学方式学习： 将你要学习的内容以教学的方式呈现给一个想象中的学生。使用简单的语言和通俗的方式解释概念，使用图表、例子和比喻来帮助理解。</p>
+<p>发现知识的空缺： 当你试图教授这个主题时，你会发现对某些概念或细节缺乏理解。注意这些不足之处，并记录下来。</p>
+<p>回到学习资料： 当你发现理解不足之处时，回到学习资料，重新学习和填补这些空缺。这可以是教科书、文章、视频教程等。</p>
+<p>简化和回顾： 用自己的话再次解释给学生。简化问题，使用通俗易懂的语言来回顾所学内容。如果你无法用简单的话解释清楚，那就说明你对该概念理解还不够深入。</p>
+<p>通过费曼学习法，你可以深入理解所学内容，并通过尝试向他人解释来发现自己知识不足的地方。这个过程不仅可以帮助你加深学习，还可以提高你的思维能力和表达能力。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2024/01/05/%E8%B4%B9%E6%9B%BC%E5%AD%A6%E4%B9%A0%E6%B3%95/" data-id="clr0bxihu00008wug0szo2x12" data-title="费曼学习法" class="article-share-link"><span class="fa fa-share">Teilen</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-常用的算法技巧" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2024/01/05/%E5%B8%B8%E7%94%A8%E7%9A%84%E7%AE%97%E6%B3%95%E6%8A%80%E5%B7%A7/" class="article-date">
@@ -111,7 +161,7 @@
 <li>选择排序，性能低</li>
 <li>快速排序<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">    public static void quickSort(int[] nums, int left, int right) &#123;</span><br><span class="line">        if (left &gt;= right) &#123;</span><br><span class="line">            return;</span><br><span class="line">        &#125;</span><br><span class="line">        int mid = left;</span><br><span class="line">        int base = nums[mid], l = left, r = right;</span><br><span class="line">        while (l != r) &#123;</span><br><span class="line">            // 从右边往左边检索,当右边的数小于基数时，停止</span><br><span class="line">            while (base &lt;= nums[r] &amp;&amp; l &lt; r) &#123;</span><br><span class="line">                r--;</span><br><span class="line">            &#125;</span><br><span class="line">            // 从左边往右边检索,当左边的数大于基数时，停止</span><br><span class="line">            while (nums[l] &lt;= base &amp;&amp; l &lt; r) &#123;</span><br><span class="line">                l++;</span><br><span class="line">            &#125;</span><br><span class="line">            //这里表示找到右边有小于基数的，左边有大于基数的，因此交换位置</span><br><span class="line">            int temp = nums[r];</span><br><span class="line">            nums[r] = nums[l];</span><br><span class="line">            nums[l] = temp;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">        // 当代码执行到这里时，把基数和中点的数交换位置</span><br><span class="line">        nums[left] = nums[l];</span><br><span class="line">        nums[l] = base;</span><br><span class="line">        // 分治法，继续排序基数左边的</span><br><span class="line">        quickSort(nums, left, l - 1);</span><br><span class="line">        // 分治法，继续排序基数右边的</span><br><span class="line">        quickSort(nums, l + 1, right);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure></li>
 </ol>
-
+<h3 id="散列表"><a href="#散列表" class="headerlink" title="散列表"></a>散列表</h3><h3 id="队列"><a href="#队列" class="headerlink" title="队列"></a>队列</h3><h3 id="栈"><a href="#栈" class="headerlink" title="栈"></a>栈</h3><h3 id="广度优先"><a href="#广度优先" class="headerlink" title="广度优先"></a>广度优先</h3><h3 id="狄克斯特拉算法"><a href="#狄克斯特拉算法" class="headerlink" title="狄克斯特拉算法"></a>狄克斯特拉算法</h3><h3 id="贪婪算法"><a href="#贪婪算法" class="headerlink" title="贪婪算法"></a>贪婪算法</h3><h3 id="动态规划"><a href="#动态规划" class="headerlink" title="动态规划"></a>动态规划</h3>
       
     </div>
     <footer class="article-footer">
@@ -776,6 +826,10 @@ public static class TokenBucket &#123;
       <ul>
         
           <li>
+            <a href="/2024/01/05/%E8%B4%B9%E6%9B%BC%E5%AD%A6%E4%B9%A0%E6%B3%95/">费曼学习法</a>
+          </li>
+        
+          <li>
             <a href="/2024/01/05/%E5%B8%B8%E7%94%A8%E7%9A%84%E7%AE%97%E6%B3%95%E6%8A%80%E5%B7%A7/">常用的算法技巧</a>
           </li>
         
@@ -789,10 +843,6 @@ public static class TokenBucket &#123;
         
           <li>
             <a href="/2023/12/25/%E6%95%B0%E6%8D%AE%E4%B8%AD%E5%8F%B0%E6%98%AF%E4%BB%80%E4%B9%88/">数据中台是什么</a>
-          </li>
-        
-          <li>
-            <a href="/2023/12/25/java%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E7%AE%80%E5%8D%95%E7%9A%84%E4%BB%A4%E7%89%8C%E6%A1%B6/">java实现一个简单的令牌桶</a>
           </li>
         
       </ul>
